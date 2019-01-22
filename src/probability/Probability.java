@@ -18,12 +18,12 @@ public class Probability {
     public static void main(String[] args) {
         
         double vertical = getProbability(5, 0.5, 0.3, 0.2);     //50% - stay, 30% - up, 20% - down
-        System.out.println("vertical: "+vertical);
+        System.out.println("vertical: "+vertical);              //0.23525000000000001
         double horizontal = getProbability(5, 0.4, 0.2, 0.4);   //40% - stay, 20% - left, 40% - right
-        System.out.println("horizontal: "+horizontal);
+        System.out.println("horizontal: "+horizontal);          //0.18944000000000005
         
         double overall = vertical*horizontal;                   //both happened
-        System.out.println("overall: "+overall);
+        System.out.println("overall: "+overall);                //0.04456576000000002
     }
     
     static double getProbability(int moves, double stayProb, double leftProb, double rightProb){
