@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package probability;
 
 import java.util.ArrayList;
@@ -22,12 +17,12 @@ public class Probability {
      */
     public static void main(String[] args) {
         
-        double vertical = getProbability(5, 0.5, 0.3, 0.2);
+        double vertical = getProbability(5, 0.5, 0.3, 0.2);     //50% - stay, 30% - up, 20% - down
         System.out.println("vertical: "+vertical);
-        double horizontal = getProbability(5, 0.4, 0.2, 0.4);
+        double horizontal = getProbability(5, 0.4, 0.2, 0.4);   //40% - stay, 20% - left, 40% - right
         System.out.println("horizontal: "+horizontal);
         
-        double overall = vertical*horizontal;
+        double overall = vertical*horizontal;                   //both happened
         System.out.println("overall: "+overall);
     }
     
@@ -36,7 +31,6 @@ public class Probability {
         double[] empty = new double[moves*2+1];
         Arrays.fill(init, 0.0);
         Arrays.fill(empty, 0.0);
-        
         
         init[moves] = 1.0;
         
