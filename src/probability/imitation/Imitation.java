@@ -1,4 +1,4 @@
-package probability.immitation;
+package probability.imitation;
 
 import java.util.Random;
 
@@ -6,7 +6,7 @@ import java.util.Random;
  *
  * @author i.epstein
  */
-public class Immitation {
+public class Imitation {
     
     public static Coordinates field(int moves, Probabilities vertical, Probabilities horizontal){
         Coordinates coordinates = new Coordinates(0, 0);

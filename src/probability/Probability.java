@@ -4,11 +4,9 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-import probability.immitation.Coordinates;
-import probability.immitation.Immitation;
-import probability.immitation.Probabilities;
+import probability.imitation.Coordinates;
+import probability.imitation.Imitation;
+import probability.imitation.Probabilities;
 
 /**
  *
@@ -38,7 +36,7 @@ public class Probability {
         System.out.println("overall: "+overall);                        //0.04456576000000002
         
         System.out.println("");
-        System.out.println("========IMMITATION========");
+        System.out.println("=========IMITATION========");
         System.out.println("");
         
         int experiments = 50000000;
@@ -46,7 +44,7 @@ public class Probability {
         int failed=0;
         
         for(int i=0; i<experiments; i++){
-            Coordinates result = Immitation.field(size, vertical, horizontal);
+            Coordinates result = Imitation.field(size, vertical, horizontal);
             if((result.getX()==0) && (result.getY()==0)){
                 success++;
             } else{
@@ -61,7 +59,7 @@ public class Probability {
         System.out.println("Result: "+result);          //0.04459246
         
         System.out.println("");
-        System.out.println("Difference (theory - immitation): "
+        System.out.println("Difference (theory - imitation): "
                 +new DecimalFormat("#.##########").format(Math.abs(overall-result)));   //0,0000267
     }
     

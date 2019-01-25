@@ -1,4 +1,4 @@
-package probability.immitation;
+package probability.imitation;
 
 /**
  *
