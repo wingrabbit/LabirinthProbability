@@ -26,9 +26,7 @@ public class Probability {
         Probabilities horizontal = new Probabilities(0.4, 0.2, 0.4);
         
         System.out.println("");
-        System.out.println("==========================");
         System.out.println("=======CALCULATION========");
-        System.out.println("==========================");
         System.out.println("");
         
         double verticalProb = getProbability(size, vertical);     //50% - stay, 30% - up, 20% - down
@@ -40,9 +38,7 @@ public class Probability {
         System.out.println("overall: "+overall);                    //0.04456576000000002
         
         System.out.println("");
-        System.out.println("==========================");
         System.out.println("========IMMITATION========");
-        System.out.println("==========================");
         System.out.println("");
         
         int experiments = 50000000;
