@@ -29,13 +29,13 @@ public class Probability {
         System.out.println("=======CALCULATION========");
         System.out.println("");
         
-        double verticalProb = getProbability(size, vertical);     //50% - stay, 30% - up, 20% - down
-        System.out.println("vertical: "+verticalProb);              //0.23525000000000001
-        double horizontalProb = getProbability(size, horizontal);   //40% - stay, 20% - left, 40% - right
-        System.out.println("horizontal: "+horizontalProb);          //0.18944000000000005
+        double verticalProb = getProbability(size, vertical);           //50% - stay, 30% - up, 20% - down
+        System.out.println("vertical: "+verticalProb);                  //0.23525000000000001
+        double horizontalProb = getProbability(size, horizontal);       //40% - stay, 20% - left, 40% - right
+        System.out.println("horizontal: "+horizontalProb);              //0.18944000000000005
         
-        double overall = verticalProb*horizontalProb;               //both happened
-        System.out.println("overall: "+overall);                    //0.04456576000000002
+        double overall = verticalProb*horizontalProb;                   //both happened
+        System.out.println("overall: "+overall);                        //0.04456576000000002
         
         System.out.println("");
         System.out.println("========IMMITATION========");
@@ -56,12 +56,13 @@ public class Probability {
         double result = (double)success/experiments;
         
         System.out.println("Experiments: "+experiments);
-        System.out.println("Success: "+success);
-        System.out.println("Failed: "+failed);
-        System.out.println("Result: "+result);
+        System.out.println("Success: "+success);        //2229623
+        System.out.println("Failed: "+failed);          //47770377
+        System.out.println("Result: "+result);          //0.04459246
         
         System.out.println("");
-        System.out.println("Difference (theory - immitation): "+new DecimalFormat("#.##########").format(Math.abs(overall-result)));
+        System.out.println("Difference (theory - immitation): "
+                +new DecimalFormat("#.##########").format(Math.abs(overall-result)));   //0,0000267
     }
     
     static double getProbability(int moves, Probabilities probabilities){
